@@ -215,20 +215,16 @@ function Introduce() {
   return (
     <SectionAnimate>
       <section className="editorial-section" aria-labelledby="section-introduce">
-        <div className="split-row">
-          <div className="split-left">
-            <h2 id="section-introduce" className="section-heading">INTRODUCE</h2>
-          </div>
-          <div>
-            {introduce.contents.map((c, i) => <p key={i}>{c}</p>)}
-            <p className="text-end">
-              <small>Latest Updated</small>{' '}
-              <span className="tag tag--muted">{`${luFmt} (D+${dplus})`}</span>
-            </p>
-            <p className="text-end" style={{ fontFamily: 'var(--font-signature)', fontSize: '1.6em', fontWeight: 300 }}>
-              {introduce.sign}
-            </p>
-          </div>
+        <h2 id="section-introduce" className="section-heading">INTRODUCE</h2>
+        <div>
+          {introduce.contents.map((c, i) => <p key={i}>{c}</p>)}
+          <p className="text-end">
+            <small>Latest Updated</small>{' '}
+            <span className="tag tag--muted">{`${luFmt} (D+${dplus})`}</span>
+          </p>
+          <p className="text-end" style={{ fontFamily: 'var(--font-signature)', fontSize: '1.6em', fontWeight: 300 }}>
+            {introduce.sign}
+          </p>
         </div>
       </section>
     </SectionAnimate>
@@ -410,7 +406,7 @@ function Skill() {
 function RowsSection({ title, list }) {
   return (
     <CommonSection title={title}>
-      <div>
+      <div className="rows-single-date">
         {list.map((r, i) => <CommonRow key={i} index={i} row={r} />)}
       </div>
     </CommonSection>

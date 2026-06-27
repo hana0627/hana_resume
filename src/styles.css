@@ -162,9 +162,15 @@ img {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: var(--space-lg);
+  align-items: center;
 }
 .split-left {
   text-align: right;
+}
+
+/* 단일 날짜(시작일 없음) 섹션: 날짜를 제목 줄에 맞춰 정렬 */
+.rows-single-date .split-row {
+  align-items: baseline;
 }
 
 @media screen and (max-width: 767px) {
