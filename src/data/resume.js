@@ -33,13 +33,11 @@ export const profile = {
 
 export const introduce = {
   contents: [
-    '저는 문제를 발견하고 원인을 분석하여 해결하는 과정에서 가장 큰 보람을 느끼는 백엔드 개발자입니다.\n' +
-    '\n' +
-    '레거시 환경에서 개발을 시작하며 구조적 한계와 운영상의 문제를 직접 경험했고, 이후 성능 개선, 장애 대응, 시스템 현대화와 같은 과제를 해결하며 개발자로 성장해왔습니다. 최근에는 3억 건 규모의 특허 데이터 플랫폼을 운영하며 OOM 장애 분석 및 해결, Kubernetes 기반 환경 전환, 검색 성능 개선 등의 경험을 쌓고 있습니다.\n' +
-    '\n' +
-    '현재에 안주하지 않고 새로운 기술과 아키텍처를 꾸준히 학습하며, 학습한 내용을 실제 서비스에 적용해 검증하는 것을 중요하게 생각합니다. 앞으로도 기술 자체보다 문제 해결에 집중하며 서비스의 안정성과 확장성에 기여하는 개발자가 되고자 합니다.\n'
+    '새로운 문제에 도전하고, 더 나은 해결책을 만들어가는 과정에서 가장 큰 동기를 얻는 백엔드 개발자입니다.',
+    '레거시 환경에서 개발을 시작하며 구조적 한계와 운영상의 문제를 경험했고, 이후 성능 개선, 장애 대응, 시스템 현대화 등 다양한 도전을 해결하며 성장해왔습니다. 최근에는 3억 건 규모의 특허 데이터 플랫폼을 운영하며 OOM 장애 해결, Kubernetes 환경 전환, 검색 성능 개선을 수행하고 있습니다.',
+    '새로운 기술과 아키텍처를 꾸준히 학습하고 실제 서비스에 적용하며 검증하는 것을 중요하게 생각합니다. 앞으로도 기술 자체보다 해결해야 할 문제와 제품의 가치를 먼저 고민하며, 서비스의 안정성과 확장성을 높이는 프로덕트 엔지니어로 성장하고자 합니다.',
   ],
-  latestUpdated: '2026-06-14',
+  latestUpdated: '2026-06-27',
   sign: 'Hana Park',
 }
 
@@ -57,9 +55,9 @@ export const highlights = [
     },
 
     {
-        title: 'Performance Engineering',
-        description: '성능 분석과 최적화를 통해 사용자 경험과 서비스 품질 개선',
-        keywords: ['Optimization', 'Query Tuning', 'Reliability'],
+        title: 'Product Engineering',
+        description: '제품과 비즈니스 맥락을 이해하고 사용자 가치로 이어지는 문제 해결',
+        keywords: ['Product Thinking', 'Problem Solving', 'Domain Knowledge'],
     },
 ]
 
@@ -79,7 +77,7 @@ export const experience = {
                       { content: '3억건 규모 특허데이터 서빙 플랫폼 백엔드' },
                       { content: '키워트프로·키워트인사이트 서비스 백엔드 API 개발 및 운영' },
                       { content: '안정성·성능 중심의 서비스 개선과 레거시 시스템 현대화' },
-                      { content: '서비스 어드민 및 백오피스 관리 기능 개발' },
+                      { content: '운영 데이터 관리 효율화를 위한 어드민 기능 개발 및 개선' },
                   ],
               },
           ],
@@ -142,26 +140,42 @@ export const project = {
             { content: 'TPS/RPS 측정방식 대신 index수 * documents 수 산정'},
           ],
         },
-        {
-          content: '키워트 어드민 서비스 IDC → EKS 마이그레이션',
-            weight: 'MEDIUM',
-          descriptions: [
-              { content: '우당탕탕 EKS 이관기 : ', postHref: 'https://buly.kr/BTRqxiH' },
-          ],
-        },
         { content: '키워트프로·키워트인사이트 통합회원 시스템 개발',
             weight: 'MEDIUM',
             descriptions: [
                 { content: '2026-06 현재 진행 중' },
-            ],}
-          ,
-        { content: '서비스 어드민 및 백오피스 관리 기능 개발' },
-          { content: 'prod -> dev/qc DB스키마 통일 작업',
-              weight: 'MEDIUM',
-              descriptions: [
-                  { content: '운영환경에 1만개의 고객문의를 넣어버리다.. : 2026-06 현재 블로그 작성 중' },
-              ],}
-          ,
+            ],},
+      ],
+    },
+    {
+      startedAt: '2025-11',
+      title: '키워트 어드민 — 레거시 시스템 현대화',
+      where: '워트인텔리전스 · Kotlin, Spring Boot, jOOQ, Thymeleaf, AWS(EKS/ECR), ArgoCD',
+      descriptions: [
+        {
+          content: '레거시 기술 스택 현대화',
+          weight: 'MEDIUM',
+          descriptions: [
+            { content: 'Java → Kotlin' },
+            { content: 'Spring Boot 2 → 4' },
+            { content: 'MyBatis → jOOQ' },
+            { content: 'JSP → Thymeleaf' },
+          ],
+        },
+        {
+          content: 'IDC → EKS 마이그레이션',
+          weight: 'MEDIUM',
+          descriptions: [
+            { content: '우당탕탕 EKS 이관기 : ', postHref: 'https://buly.kr/BTRqxiH' },
+          ],
+        },
+        {
+          content: '어드민 서비스 유지보수',
+          weight: 'MEDIUM',
+          descriptions: [
+            { content: '운영환경에 1.4만개의 고객문의를 넣어버리다', postHref: 'https://buly.kr/ET0lmqW' },
+          ],
+        },
       ],
     },
     {

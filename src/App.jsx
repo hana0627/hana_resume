@@ -220,7 +220,7 @@ function Introduce() {
           {introduce.contents.map((c, i) => <p key={i}>{c}</p>)}
           <p className="text-end">
             <small>Latest Updated</small>{' '}
-            <span className="tag tag--muted">{`${luFmt} (D+${dplus})`}</span>
+            <span className="tag tag--muted">{`${luFmt}`}</span>
           </p>
           <p className="text-end" style={{ fontFamily: 'var(--font-signature)', fontSize: '1.6em', fontWeight: 300 }}>
             {introduce.sign}
